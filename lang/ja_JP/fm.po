@@ -8,7 +8,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2020-02-29 03:27\n"
+"PO-Revision-Date: 2020-05-23 08:00\n"
 
 msgid "Back"
 msgstr ""
@@ -157,6 +157,9 @@ msgstr ""
 msgid "Boot ISO (map --mem)"
 msgstr ""
 
+msgid "Boot ISO (Ventoy)"
+msgstr ""
+
 msgid "Boot EFI Files"
 msgstr ""
 
@@ -243,6 +246,12 @@ msgstr ""
 
 msgid "Language"
 msgstr "言語"
+
+msgid "Keyboard layouts"
+msgstr ""
+
+msgid "Fix \"BlInitializeLibrary failed XXX\" error"
+msgstr ""
 
 msgid "Disable PatchGuard and DSE at boot time"
 msgstr ""
@@ -332,6 +341,12 @@ msgid "Boot ${winver} on ${device} ${info}"
 msgstr ""
 
 msgid "Boot ${device} ${info}"
+msgstr ""
+
+msgid "Boot ${device} (PBR) ${info}"
+msgstr ""
+
+msgid "Boot ${tmp} (MBR) [${tmpsize}]"
 msgstr ""
 
 msgid "Boot ISO (Loopback)"
@@ -458,5 +473,17 @@ msgid "GRUB build date: %s"
 msgstr ""
 
 msgid "License: GNU GPLv3"
+msgstr ""
+
+msgid "File not found"
+msgstr ""
+
+msgid "Please select the type of file you want to search:"
+msgstr ""
+
+msgid "Install Windows XP - STEP 1"
+msgstr ""
+
+msgid "Install Windows XP - STEP 2"
 msgstr ""
 

@@ -1,15 +1,9 @@
 source ${prefix}/func.sh;
 
-function auto_swap {
-  if regexp '^hd[0-9a-zA-Z,]+$' ${grubfm_disk};
-  then
-    regexp -s devnum '^hd([0-9]+).*$' ${grubfm_disk};
-    if test "devnum" != "0";
-    then
-      drivemap -s (hd0) (${grubfm_disk});
-    fi;
-  fi;
-}
+if [ -z "${grubfm_startbat}" -o ! -f "${grubfm_startbat}" ];
+then
+  set grubfm_startbat="(install)/start.bat";
+fi;
 
 function win_isoboot {
   set lang=en_US;
@@ -34,7 +28,7 @@ function win_isoboot {
                newc:null.cfg:(envblk)/null.cfg \
                newc:mount_x64.exe:(install)/mount_x64.exe \
                newc:mount_x86.exe:(install)/mount_x86.exe \
-               newc:start.bat:(install)/start.bat \
+               newc:start.bat:${grubfm_startbat} \
                newc:winpeshl.ini:(install)/winpeshl.ini \
                newc:boot.wim:"${1}";
     else
@@ -45,7 +39,7 @@ function win_isoboot {
                newc:null.cfg:(envblk)/null.cfg \
                newc:mount_x64.exe:(install)/mount_x64.exe \
                newc:mount_x86.exe:(install)/mount_x86.exe \
-               newc:start.bat:(install)/start.bat \
+               newc:start.bat:${grubfm_startbat} \
                newc:winpeshl.ini:(install)/winpeshl.ini \
                newc:autounattend.xml:"${2}" \
                newc:boot.wim:"${1}";
@@ -63,7 +57,7 @@ function win_isoboot {
               @:null.cfg:(envblk)/null.cfg \
               @:mount_x64.exe:(install)/mount_x64.exe \
               @:mount_x86.exe:(install)/mount_x86.exe \
-              @:start.bat:(install)/start.bat \
+              @:start.bat:${grubfm_startbat} \
               @:winpeshl.ini:(install)/winpeshl.ini \
               @:boot.wim:"${1}";
     else
@@ -73,7 +67,7 @@ function win_isoboot {
               @:null.cfg:(envblk)/null.cfg \
               @:mount_x64.exe:(install)/mount_x64.exe \
               @:mount_x86.exe:(install)/mount_x86.exe \
-              @:start.bat:(install)/start.bat \
+              @:start.bat:${grubfm_startbat} \
               @:winpeshl.ini:(install)/winpeshl.ini \
               @:autounattend.xml:"${2}" \
               @:boot.wim:"${1}";

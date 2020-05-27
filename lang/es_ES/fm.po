@@ -8,7 +8,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2020-04-08 21:17\n"
+"PO-Revision-Date: 2020-05-23 08:22\n"
 
 msgid "Back"
 msgstr "Atrás"
@@ -157,6 +157,9 @@ msgstr "Arrancar ISO (map)"
 msgid "Boot ISO (map --mem)"
 msgstr "Arrancar ISO (map --mem)"
 
+msgid "Boot ISO (Ventoy)"
+msgstr "Iniciar con imagen IO (Ventoy)"
+
 msgid "Boot EFI Files"
 msgstr "Arrancar archivos EFI"
 
@@ -173,10 +176,10 @@ msgid "Chainload BIOS Boot Sector"
 msgstr "Chainload sector de arranque de BIOS"
 
 msgid "Chainload NTLDR"
-msgstr "Chainload NTLDR"
+msgstr ""
 
 msgid "Chainload BOOTMGR"
-msgstr "Chainload BOOTMGR"
+msgstr ""
 
 msgid "Open As GRUB4DOS MOD"
 msgstr "Abrir como GRUB4DOS MOD"
@@ -243,6 +246,12 @@ msgstr "El archivo no es contiguo. (${frag} fragmentos)"
 
 msgid "Language"
 msgstr "Idioma"
+
+msgid "Keyboard layouts"
+msgstr ""
+
+msgid "Fix \"BlInitializeLibrary failed XXX\" error"
+msgstr ""
 
 msgid "Disable PatchGuard and DSE at boot time"
 msgstr "Desactivar PatchGuard y DSE al arrancar"
@@ -314,10 +323,10 @@ msgid "GRUB Console"
 msgstr "Consola de GRUB"
 
 msgid "EFI Shell"
-msgstr "EFI Shell"
+msgstr ""
 
 msgid "UEFI DUET"
-msgstr "UEFI DUET"
+msgstr ""
 
 msgid "Load External Menu on (${device}) ${info}"
 msgstr "Cargar menú externo en (${device}) ${info}"
@@ -333,6 +342,12 @@ msgstr "Arrancar ${winver} en ${device} ${info}"
 
 msgid "Boot ${device} ${info}"
 msgstr "Arrancar ${device} ${info}"
+
+msgid "Boot ${device} (PBR) ${info}"
+msgstr "Arrancar ${device} (PBR) ${info}"
+
+msgid "Boot ${tmp} (MBR) [${tmpsize}]"
+msgstr "Arrancar ${tmp} (MBR) [${tmpsize}]"
 
 msgid "Boot ISO (Loopback)"
 msgstr "Arrancar ISO (Loopback)"
@@ -459,4 +474,16 @@ msgstr "Fecha de compilación GRUB: %s"
 
 msgid "License: GNU GPLv3"
 msgstr "Licencia: GNU GPLv3"
+
+msgid "File not found"
+msgstr ""
+
+msgid "Please select the type of file you want to search:"
+msgstr ""
+
+msgid "Install Windows XP - STEP 1"
+msgstr ""
+
+msgid "Install Windows XP - STEP 2"
+msgstr ""
 

@@ -148,6 +148,9 @@ msgstr ""
 msgid "Boot ISO (map --mem)"
 msgstr ""
 
+msgid "Boot ISO (Ventoy)"
+msgstr ""
+
 msgid "Boot EFI Files"
 msgstr ""
 
@@ -233,6 +236,12 @@ msgid "File is non-contiguous. (${frag} fragments)"
 msgstr ""
 
 msgid "Language"
+msgstr ""
+
+msgid "Keyboard layouts"
+msgstr ""
+
+msgid "Fix \"BlInitializeLibrary failed XXX\" error"
 msgstr ""
 
 msgid "Disable PatchGuard and DSE at boot time"
@@ -323,6 +332,12 @@ msgid "Boot ${winver} on ${device} ${info}"
 msgstr ""
 
 msgid "Boot ${device} ${info}"
+msgstr ""
+
+msgid "Boot ${device} (PBR) ${info}"
+msgstr ""
+
+msgid "Boot ${tmp} (MBR) [${tmpsize}]"
 msgstr ""
 
 msgid "Boot ISO (Loopback)"
@@ -450,4 +465,16 @@ msgid "GRUB build date: %s"
 msgstr ""
 
 msgid "License: GNU GPLv3"
+msgstr ""
+
+msgid "File not found"
+msgstr ""
+
+msgid "Please select the type of file you want to search:"
+msgstr ""
+
+msgid "Install Windows XP - STEP 1"
+msgstr ""
+
+msgid "Install Windows XP - STEP 2"
 msgstr ""

@@ -7,21 +7,13 @@ else
     echo "not found\nPlease install gettext."
     exit
 fi
-echo -n "checking for mkisofs ... "
-if [ -e "$(which mkisofs)" ]
+echo -n "checking for xorriso ... "
+if [ -e "$(which xorriso)" ]
 then
     echo "ok"
-    geniso=$(which mkisofs)
 else
-    echo -n "not found\nchecking for genisoimage ... "
-    if [ -e "$(which genisoimage)" ]
-    then
-        echo "ok"
-        geniso=$(which genisoimage)
-    else
-        echo "not found\nPlease install mkisofs or genisoimage."
-        exit
-    fi
+    echo "not found\nPlease install xorriso."
+    exit
 fi
 echo -n "checking for grub ... "
 if [ -e "$(which grub-mkimage)" ]
@@ -29,6 +21,14 @@ then
     echo "ok"
 else
     echo "not found\nPlease install grub."
+    exit
+fi
+echo -n "checking for mtools ... "
+if [ -e "$(which mtools)" ]
+then
+    echo "ok"
+else
+    echo "not found\nPlease install mtools."
     exit
 fi
 
@@ -61,6 +61,7 @@ echo "9. Spanish"
 echo "10. Polish"
 echo "11. Ukrainian"
 echo "12. French"
+echo "13. Danish"
 read -p "Please make a choice: " choice
 case "$choice" in
     2)
@@ -106,6 +107,10 @@ case "$choice" in
         echo "fr_FR"
         cp lang/fr_FR/lang.sh build/boot/grubfm/
         ;;
+    13)
+        echo "da_DK"
+        cp lang/da_DK/lang.sh build/boot/grubfm/
+        ;;
     *)
         echo "zh_CN"
         cp lang/zh_CN/lang.sh build/boot/grubfm/
@@ -119,13 +124,13 @@ do
     echo "copying ${modules}.mod"
     cp grub/x86_64-efi/${modules}.mod build/boot/grubfm/x86_64-efi/
 done
-cp arch/x64/*.efi build/boot/grubfm
+# cp arch/x64/*.efi build/boot/grubfm
 cp arch/x64/*.gz build/boot/grubfm
 cd build
 find ./boot | cpio -o -H newc > ./memdisk.cpio
 cd ..
 rm -r build/boot/grubfm/x86_64-efi
-rm build/boot/grubfm/*.efi
+# rm build/boot/grubfm/*.efi
 rm build/boot/grubfm/*.gz
 modules=$(cat arch/x64/builtin.lst)
 grub-mkimage -m ./build/memdisk.cpio -d ./grub/x86_64-efi -p "(memdisk)/boot/grubfm" -c arch/x64/config.cfg -o grubfmx64.efi -O x86_64-efi $modules
@@ -137,13 +142,13 @@ do
     echo "copying ${modules}.mod"
     cp grub/i386-efi/${modules}.mod build/boot/grubfm/i386-efi/
 done
-cp arch/ia32/*.efi build/boot/grubfm
+# cp arch/ia32/*.efi build/boot/grubfm
 cp arch/ia32/*.gz build/boot/grubfm
 cd build
 find ./boot | cpio -o -H newc > ./memdisk.cpio
 cd ..
 rm -r build/boot/grubfm/i386-efi
-rm build/boot/grubfm/*.efi
+# rm build/boot/grubfm/*.efi
 rm build/boot/grubfm/*.gz
 modules=$(cat arch/ia32/builtin.lst)
 grub-mkimage -m ./build/memdisk.cpio -d ./grub/i386-efi -p "(memdisk)/boot/grubfm" -c arch/ia32/config.cfg -o grubfmia32.efi -O i386-efi $modules
@@ -162,7 +167,6 @@ cp arch/legacy/insmod.lst build/boot/grubfm/
 cp arch/legacy/grub.exe build/boot/grubfm/
 cp arch/legacy/duet64.iso build/boot/grubfm/
 cp arch/legacy/memdisk build/boot/grubfm/
-cp arch/legacy/ipxe.lkrn build/boot/grubfm/
 cp arch/legacy/*.gz build/boot/grubfm/
 cd build
 find ./boot | cpio -o -H newc | gzip -9 > ./fm.loop
@@ -173,6 +177,16 @@ cat grub/i386-pc/cdboot.img build/core.img > build/fmldr
 rm build/core.img
 cp arch/legacy/MAP build/
 cp -r arch/legacy/ntboot/* build/
+touch build/ventoy.dat
 
-$geniso -R -hide-joliet boot.catalog -b fmldr -no-emul-boot -allow-lowercase -boot-load-size 4 -boot-info-table -o grubfm.iso build
+xorriso -as mkisofs -R -hide-joliet boot.catalog -b fmldr -no-emul-boot -allow-lowercase -boot-load-size 4 -boot-info-table -o grubfm.iso build
+
+dd if=/dev/zero of=build/efi.img bs=1M count=16
+mkfs.vfat build/efi.img
+mmd -i build/efi.img ::EFI
+mmd -i build/efi.img ::EFI/BOOT
+mcopy -i build/efi.img grubfmx64.efi ::EFI/BOOT/BOOTX64.EFI
+mcopy -i build/efi.img grubfmia32.efi ::EFI/BOOT/BOOTIA32.EFI
+xorriso -as mkisofs -R -hide-joliet boot.catalog -b fmldr -no-emul-boot -allow-lowercase -boot-load-size 4 -boot-info-table -eltorito-alt-boot -e efi.img -no-emul-boot -o grubfm_multiarch.iso build
+
 rm -r build

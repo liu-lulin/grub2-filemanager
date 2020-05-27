@@ -8,7 +8,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2020-02-29 03:41\n"
+"PO-Revision-Date: 2020-05-23 08:22\n"
 
 msgid "Back"
 msgstr "Quay về"
@@ -134,10 +134,10 @@ msgid "Boot ISO (Easy2Boot)"
 msgstr "Khởi động ISO (Easy2Boot)"
 
 msgid "Boot ISO (loopback.cfg)"
-msgstr ""
+msgstr "Khởi động ISO (loopback.cfg)"
 
 msgid "Boot ISO (partnew)"
-msgstr ""
+msgstr "Khởi động ISO (partnew)"
 
 msgid "Install Windows (x64)"
 msgstr "Cài đặt Windows (x64)"
@@ -156,6 +156,9 @@ msgstr "Khởi động ISO (map)"
 
 msgid "Boot ISO (map --mem)"
 msgstr "Khởi động ISO (map --mem)"
+
+msgid "Boot ISO (Ventoy)"
+msgstr "Khởi động ISO (Ventoy)"
 
 msgid "Boot EFI Files"
 msgstr "Khởi động Tập tin EFI"
@@ -243,6 +246,12 @@ msgstr ""
 
 msgid "Language"
 msgstr "Ngôn ngữ"
+
+msgid "Keyboard layouts"
+msgstr ""
+
+msgid "Fix \"BlInitializeLibrary failed XXX\" error"
+msgstr ""
 
 msgid "Disable PatchGuard and DSE at boot time"
 msgstr "Vô Hiệu Hóa PatchGuard và DSE trong khi khởi động"
@@ -334,11 +343,17 @@ msgstr ""
 msgid "Boot ${device} ${info}"
 msgstr ""
 
-msgid "Boot ISO (Loopback)"
+msgid "Boot ${device} (PBR) ${info}"
 msgstr ""
 
-msgid "Boot ISO (ISOLINUX)"
+msgid "Boot ${tmp} (MBR) [${tmpsize}]"
 msgstr ""
+
+msgid "Boot ISO (Loopback)"
+msgstr "Khởi động ISO (Loopback)"
+
+msgid "Boot ISO (ISOLINUX)"
+msgstr "Khởi động ISO (ISOLINUX)"
 
 msgid "Detecting ISO type ..."
 msgstr ""
@@ -347,7 +362,7 @@ msgid "Boot ${distro} From ISO"
 msgstr ""
 
 msgid "Boot "
-msgstr ""
+msgstr "Khởi động "
 
 msgid " From ISO"
 msgstr ""
@@ -458,5 +473,17 @@ msgid "GRUB build date: %s"
 msgstr ""
 
 msgid "License: GNU GPLv3"
+msgstr ""
+
+msgid "File not found"
+msgstr ""
+
+msgid "Please select the type of file you want to search:"
+msgstr ""
+
+msgid "Install Windows XP - STEP 1"
+msgstr ""
+
+msgid "Install Windows XP - STEP 2"
 msgstr ""
 

@@ -8,7 +8,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2020-04-02 09:05\n"
+"PO-Revision-Date: 2020-05-23 08:22\n"
 
 msgid "Back"
 msgstr "Zurück"
@@ -157,6 +157,9 @@ msgstr "Boote ISO (map)"
 msgid "Boot ISO (map --mem)"
 msgstr "Boote ISO (map --mem)"
 
+msgid "Boot ISO (Ventoy)"
+msgstr "Boote ISO (Ventoy)"
+
 msgid "Boot EFI Files"
 msgstr "Boote EFI Dateien"
 
@@ -244,6 +247,12 @@ msgstr "Datei ist nicht zusammenhängend. (${frag} Fragmente)"
 msgid "Language"
 msgstr "Sprache"
 
+msgid "Keyboard layouts"
+msgstr "Tastatur-Belegungen"
+
+msgid "Fix \"BlInitializeLibrary failed XXX\" error"
+msgstr "Behebung des Fehlers \"BlInitializeLibrary failed XXX\""
+
 msgid "Disable PatchGuard and DSE at boot time"
 msgstr "PatchGuard und DSE beim Booten deaktivieren"
 
@@ -251,7 +260,7 @@ msgid "Install override security policy"
 msgstr "Sicherheitsrichtlinien überschreiben"
 
 msgid "Disable shim validation and reboot"
-msgstr "Shim-Validierung und Neustart deaktivieren"
+msgstr "Shim-Validierung deaktivieren und Neustart"
 
 msgid "Disable graphics mode (T)"
 msgstr "Grafikmodus deaktivieren (T)"
@@ -333,6 +342,12 @@ msgstr "Boote ${winver} auf ${device} ${info}"
 
 msgid "Boot ${device} ${info}"
 msgstr "Boote ${device} ${info}"
+
+msgid "Boot ${device} (PBR) ${info}"
+msgstr "Boote ${device} (PBR) ${info}"
+
+msgid "Boot ${tmp} (MBR) [${tmpsize}]"
+msgstr "Boote ${tmp} (MBR) [${tmpsize}]"
 
 msgid "Boot ISO (Loopback)"
 msgstr "Boote ISO (Loopback)"
@@ -459,4 +474,16 @@ msgstr "GRUB Erstellungsdatum: %s"
 
 msgid "License: GNU GPLv3"
 msgstr "Lizenz: GNU GPLv3"
+
+msgid "File not found"
+msgstr "Datei nicht gefunden"
+
+msgid "Please select the type of file you want to search:"
+msgstr "Bitte wählen Sie den Dateityp aus, nach dem Sie suchen möchten:"
+
+msgid "Install Windows XP - STEP 1"
+msgstr "Installiere Windows XP - SCHRITT 1"
+
+msgid "Install Windows XP - STEP 2"
+msgstr "Installiere Windows XP - SCHRITT 2"
 

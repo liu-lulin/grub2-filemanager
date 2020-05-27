@@ -8,7 +8,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2020-04-13 21:52\n"
+"PO-Revision-Date: 2020-05-23 08:22\n"
 
 msgid "Back"
 msgstr "Retour"
@@ -157,6 +157,9 @@ msgstr "Démarrer l'ISO (map)"
 msgid "Boot ISO (map --mem)"
 msgstr "Démarrer l'ISO (map --mem)"
 
+msgid "Boot ISO (Ventoy)"
+msgstr "Démarrer l'ISO (Ventoy)"
+
 msgid "Boot EFI Files"
 msgstr "Démarrer les fichiers EFI"
 
@@ -244,6 +247,12 @@ msgstr "Le fichier n'est pas contiguë. (${frag} fragments)"
 msgid "Language"
 msgstr "Langue"
 
+msgid "Keyboard layouts"
+msgstr ""
+
+msgid "Fix \"BlInitializeLibrary failed XXX\" error"
+msgstr ""
+
 msgid "Disable PatchGuard and DSE at boot time"
 msgstr "Désactiver PatchGuard et DSE au démarrage"
 
@@ -314,7 +323,7 @@ msgid "GRUB Console"
 msgstr "Console GRUB"
 
 msgid "EFI Shell"
-msgstr "EFI Shell"
+msgstr ""
 
 msgid "UEFI DUET"
 msgstr ""
@@ -333,6 +342,12 @@ msgstr "Démarrer ${winver} sur ${device} ${info}"
 
 msgid "Boot ${device} ${info}"
 msgstr "Démarrer ${device} ${info}"
+
+msgid "Boot ${device} (PBR) ${info}"
+msgstr "Démarrer ${device} (PBR) ${info}"
+
+msgid "Boot ${tmp} (MBR) [${tmpsize}]"
+msgstr "Démarrer ${tmp} (MBR) [${tmpsize}]"
 
 msgid "Boot ISO (Loopback)"
 msgstr "Démarrer l'ISO (loopback)"
@@ -459,4 +474,16 @@ msgstr "Date de compilation GRUB : %s"
 
 msgid "License: GNU GPLv3"
 msgstr "Licence : GNU GPLv3"
+
+msgid "File not found"
+msgstr ""
+
+msgid "Please select the type of file you want to search:"
+msgstr ""
+
+msgid "Install Windows XP - STEP 1"
+msgstr ""
+
+msgid "Install Windows XP - STEP 2"
+msgstr ""
 

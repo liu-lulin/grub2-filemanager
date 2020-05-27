@@ -21,6 +21,10 @@ menuentry $"Language" --class lang {
   lua ${prefix}/language.lua;
 }
 
+menuentry $"Keyboard layouts" --class gkb {
+  lua ${prefix}/kbd.lua;
+}
+
 if [ "${mode_current}" != "0x0" ];
 then
   menuentry $"Disable graphics mode (T)" --class ms-dos --hotkey "t" {
@@ -102,9 +106,14 @@ else
   }
 fi;
 
-menuentry $"Load AHCI Driver" --class pmagic {
-  insmod ahci;
-}
+if [ "${grub_platform}" = "efi" -a -z "${grubfm_fixmmap}" ];
+then
+  menuentry $"Fix \"BlInitializeLibrary failed XXX\" error" --class mem {
+    fixmmap;
+    export grubfm_fixmmap=1453;
+    configfile ${prefix}/settings.sh;
+  }
+fi;
 
 menuentry $"Mount encrypted volumes (LUKS and geli)" --class konboot {
   insmod luks;

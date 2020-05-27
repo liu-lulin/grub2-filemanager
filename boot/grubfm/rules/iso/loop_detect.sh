@@ -60,6 +60,26 @@ function iso_detect {
     export src=win;
     return;
   fi;
+  lua ${prefix}/rules/iso/winpe.lua;
+  if [ ${wim_count} -ge 1 ];
+  then
+    export icon=nt6;
+    export distro="Windows PE";
+    menuentry $"Boot ${distro} From ISO" --class ${icon} {
+      loopback -d loop;
+      loopback loop "${grubfm_file}";
+      set do_list=1;
+      lua ${prefix}/rules/iso/winpe.lua;
+    }
+  fi;
+  if [ -f (loop)/WIN51 -a "${grub_platform}" = "pc" ];
+  then
+    export linux_extra=" ";
+    export icon=nt5;
+    export distro="Windows XP";
+    export src=winxp;
+    return;
+  fi;
   if [ -d (loop)/casper ];
   then
     export linux_extra="iso-scan/filename=${grubfm_path}";
@@ -151,6 +171,22 @@ function iso_detect {
     export icon=archlinux;
     export distro="System Rescue CD";
     export src=sysresccd;
+    return;
+  fi;
+  if [ -d (loop)/proxmox ];
+  then
+    export linux_extra="grubfm_path=${grubfm_path}";
+    export icon=debian;
+    export distro="Proxmox";
+    export src=proxmox;
+    return;
+  fi;
+  if [ -f (loop)/veket*.sfs ];
+  then
+    export linux_extra="grubfm_path=${grubfm_path}";
+    export icon=slackware;
+    export distro="Veket";
+    export src=veket;
     return;
   fi;
   if [ -f (loop)/ipfire*.media ];

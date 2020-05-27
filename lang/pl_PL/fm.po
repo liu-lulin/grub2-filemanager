@@ -8,7 +8,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
-"PO-Revision-Date: 2020-03-31 13:23\n"
+"PO-Revision-Date: 2020-05-23 08:22\n"
 
 msgid "Back"
 msgstr "Wstecz"
@@ -157,6 +157,9 @@ msgstr "Uruchom ISO (map)"
 msgid "Boot ISO (map --mem)"
 msgstr "Uruchom ISO (map --mem)"
 
+msgid "Boot ISO (Ventoy)"
+msgstr "Uruchom ISO (Ventoy)"
+
 msgid "Boot EFI Files"
 msgstr "Uruchom pliki EFI"
 
@@ -243,6 +246,12 @@ msgstr "Plik nie jest ciągły. (${frag} fragmentów)"
 
 msgid "Language"
 msgstr "Język"
+
+msgid "Keyboard layouts"
+msgstr "Układy klawiatury"
+
+msgid "Fix \"BlInitializeLibrary failed XXX\" error"
+msgstr "Napraw błąd \"BlInitializeLibrary failed XXX\""
 
 msgid "Disable PatchGuard and DSE at boot time"
 msgstr "Wyłącz PatchGuard i DSE podczas uruchamiania"
@@ -333,6 +342,12 @@ msgstr "Uruchom ${winver} na ${device} ${info}"
 
 msgid "Boot ${device} ${info}"
 msgstr "Uruchom ${device} ${info}"
+
+msgid "Boot ${device} (PBR) ${info}"
+msgstr "Uruchom ${device} (PBR) ${info}"
+
+msgid "Boot ${tmp} (MBR) [${tmpsize}]"
+msgstr "Uruchom ${tmp} (MBR) [${tmpsize}]"
 
 msgid "Boot ISO (Loopback)"
 msgstr "Uruchom ISO (Loopback)"
@@ -459,4 +474,16 @@ msgstr "Data kompilacji GRUB: %s"
 
 msgid "License: GNU GPLv3"
 msgstr "Licencja: GNU GPLv3"
+
+msgid "File not found"
+msgstr "Nie znaleziono pliku"
+
+msgid "Please select the type of file you want to search:"
+msgstr "Wybierz typ pliku do wyszukania:"
+
+msgid "Install Windows XP - STEP 1"
+msgstr "Zainstaluj Windows XP - KROK 1"
+
+msgid "Install Windows XP - STEP 2"
+msgstr "Zainstaluj Windows XP - KROK 2"
 
